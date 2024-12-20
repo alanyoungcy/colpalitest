@@ -2,7 +2,11 @@ import asyncio
 
 from xai_sdk.v1 import Client
 
-XAI_API_KEY = "xai-VslBZI8ZR8PtKR90LDO2hGo4nDKVuP9ckBvqeXe79v9aIj5EQvxntEO1D8PoTOwm6scChW7bpvRh6zyQ"
+from dotenv import load_dotenv
+
+load_dotenv()
+
+XAI_API_KEY = os.getenv("XAI_API_KEY")
 
 async def main():
     #"""Runs the example."""
